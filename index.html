@@ -224,7 +224,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h3>Reserve a Table</h3>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <button type="button" class="close" id="timesCloseModal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <dl class="row">
@@ -265,7 +265,7 @@
                         <dd class="col-10">
                           <div class="form-group row">
                               <div class="col-md-10">
-                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                  <button type="button" class="btn btn-danger" id="cancelReserve">Cancel</button>
                                   <button type="submit" class="btn btn-primary">Reserve</button>
                               </div>
                           </div>
@@ -339,6 +339,12 @@
             });
             $("#reserveTableButton").click(function(){
               $("#reserve").modal('show')
+            });
+            $("#timesCloseModal").click(function(){
+              $("#reserve").modal('hide')
+            });
+            $("#cancelReserve").click(function(){
+              $("#reserve").modal('hide')
             });
         });
     </script>
